@@ -29,6 +29,16 @@
       "source": "/xsdo",
       "destination": "https://github.com/OpenFASTER-Standard/xsd-ontology",
       "permanent": false
+    },
+    {
+      "source": "/realizations/kafe.ttl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/realizations/v0.1.0/modules/kafe.ttl",
+      "permanent": false
+    },
+    {
+      "source": "/realizations",
+      "destination": "https://github.com/OpenFASTER-Standard/realizations",
+      "permanent": false
     }
   ]
 }
