@@ -32,7 +32,7 @@
     },
     {
       "source": "/realizations/kafe.ttl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/realizations/v0.1.0/modules/kafe.ttl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/realizations/v0.2.0/modules/kafe.ttl",
       "permanent": false
     },
     {
