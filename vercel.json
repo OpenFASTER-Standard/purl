@@ -54,6 +54,21 @@
       "source": "/sso",
       "destination": "https://github.com/OpenFASTER-Standard/spreadsheet-ontology",
       "permanent": false
+    },
+    {
+      "source": "/xmlo/xml-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/xml-ontology/v0.1.0/xml-ontology.owl",
+      "permanent": false
+    },
+    {
+      "source": "/xmlo/:id",
+      "destination": "/xmlo/docs/#https://purl.openfaster.org/xmlo/:id",
+      "permanent": false
+    },
+    {
+      "source": "/xmlo",
+      "destination": "https://github.com/OpenFASTER-Standard/xml-ontology",
+      "permanent": false
     }
   ]
 }

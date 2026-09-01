@@ -1,0 +1,125 @@
+@prefix : <https://purl.openfaster.org/xmlo/xml-ontology.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.openfaster.org/xmlo/xml-ontology.owl#> .
+
+<https://purl.openfaster.org/xmlo/xml-ontology.owl> rdf:type owl:Ontology ;
+                                                     <http://purl.org/dc/elements/1.1/description> "An OWL vocabulary for a concrete XML document instance's actual structure -- real elements in real document order, real attributes, real text content -- as opposed to XSD's grammar of what's allowed (see xsd-ontology for that). Novel territory: no confirmed existing prior art was found to adopt instead, but none was confirmed absent either -- see the design doc for the research."@en ;
+                                                     <http://purl.org/dc/elements/1.1/title> "XML Ontology"@en ;
+                                                     <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://purl.openfaster.org/xmlo/hasAttribute
+<https://purl.openfaster.org/xmlo/hasAttribute> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://purl.openfaster.org/xmlo/Element> ;
+                                                rdfs:range <https://purl.openfaster.org/xmlo/Attribute> ;
+                                                rdfs:label "has attribute"@en .
+
+
+###  https://purl.openfaster.org/xmlo/hasChildElement
+<https://purl.openfaster.org/xmlo/hasChildElement> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://purl.openfaster.org/xmlo/Element> ;
+                                                   rdfs:range <https://purl.openfaster.org/xmlo/Element> ;
+                                                   rdfs:label "has child element"@en .
+
+
+###  https://purl.openfaster.org/xmlo/rootElement
+<https://purl.openfaster.org/xmlo/rootElement> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://purl.openfaster.org/xmlo/Document> ;
+                                               rdfs:range <https://purl.openfaster.org/xmlo/Element> ;
+                                               rdfs:label "root element"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://purl.openfaster.org/xmlo/attributeName
+<https://purl.openfaster.org/xmlo/attributeName> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://purl.openfaster.org/xmlo/Attribute> ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:label "attribute name"@en .
+
+
+###  https://purl.openfaster.org/xmlo/attributeValue
+<https://purl.openfaster.org/xmlo/attributeValue> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://purl.openfaster.org/xmlo/Attribute> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:label "attribute value"@en .
+
+
+###  https://purl.openfaster.org/xmlo/childPosition
+<https://purl.openfaster.org/xmlo/childPosition> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://purl.openfaster.org/xmlo/Element> ;
+                                                 rdfs:range xsd:positiveInteger ;
+                                                 rdfs:comment "1-based position among an Element's children, in real document order. Same explicit-position convention as xsdo:particlePosition/sso:sheetPosition -- reasoned by analogy for the concrete-instance case, not independently re-verified (see design doc)."@en ;
+                                                 rdfs:label "child position"@en .
+
+
+###  https://purl.openfaster.org/xmlo/elementName
+<https://purl.openfaster.org/xmlo/elementName> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://purl.openfaster.org/xmlo/Element> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "element name"@en .
+
+
+###  https://purl.openfaster.org/xmlo/namespaceURI
+<https://purl.openfaster.org/xmlo/namespaceURI> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://purl.openfaster.org/xmlo/Element> ;
+                                                rdfs:range xsd:anyURI ;
+                                                rdfs:label "namespace URI"@en .
+
+
+###  https://purl.openfaster.org/xmlo/textContent
+<https://purl.openfaster.org/xmlo/textContent> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://purl.openfaster.org/xmlo/Element> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "Optional. The element's simple text value, for leaf/simple-content elements. Not used for elements with child elements -- nothing in mikadiv-vib/kafe mixes text and child elements in the same element."@en ;
+                                               rdfs:label "text content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://purl.openfaster.org/xmlo/Attribute
+<https://purl.openfaster.org/xmlo/Attribute> rdf:type owl:Class ;
+                                             rdfs:comment "A real attribute instance on an Element."@en ;
+                                             rdfs:label "Attribute"@en .
+
+
+###  https://purl.openfaster.org/xmlo/Document
+<https://purl.openfaster.org/xmlo/Document> rdf:type owl:Class ;
+                                            rdfs:comment "A single concrete XML document instance."@en ;
+                                            rdfs:label "Document"@en .
+
+
+###  https://purl.openfaster.org/xmlo/Element
+<https://purl.openfaster.org/xmlo/Element> rdf:type owl:Class ;
+                                           rdfs:comment "A real element instance within a concrete document, as opposed to xsdo:ElementDeclaration, which describes what elements a schema allows."@en ;
+                                           rdfs:label "Element"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
