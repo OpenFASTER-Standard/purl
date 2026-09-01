@@ -14,6 +14,21 @@
       "source": "/io",
       "destination": "https://github.com/OpenFASTER-Standard/institutional-ontology",
       "permanent": false
+    },
+    {
+      "source": "/xsdo/xsd-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/xsd-ontology/v0.1.0/xsd-ontology.owl",
+      "permanent": false
+    },
+    {
+      "source": "/xsdo/:id",
+      "destination": "/xsdo/docs/#https://purl.openfaster.org/xsdo/:id",
+      "permanent": false
+    },
+    {
+      "source": "/xsdo",
+      "destination": "https://github.com/OpenFASTER-Standard/xsd-ontology",
+      "permanent": false
     }
   ]
 }
