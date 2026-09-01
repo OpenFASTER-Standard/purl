@@ -3335,6 +3335,110 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ]
 }, {
+  "@id" : "https://purl.openfaster.org/io/IO_0000003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A formal salutation used to address an individual, indicating their preferred title or the absence of one."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@language" : "en",
+    "@value" : "KaFE XSD (kafe-standardtypes.xsd, NatP_Struct): Anrede, type Anrede_ENUM. Three permitted values, each modeled as its own subconcept (IO:0000004/0000005/0000006) rather than an opaque string enumeration, since each carries real meaning of its own. No MiKaDiv equivalent exists -- MiKaDiv's ThirdPartyDisclosureRequest.xsd has only a free-text Title field (a different concept: an honorific/qualification like \"Dr.\", not a form of address), so this concept is KaFE-only, unlike IO:0000001/IO:0000002."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
+    "@language" : "de",
+    "@value" : "Anredeform"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
+    "@language" : "en",
+    "@value" : "KaFE: kafe-standardtypes.xsd, NatP_Struct.Anrede and Anrede_ENUM."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Form of address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
+  } ]
+}, {
+  "@id" : "https://purl.openfaster.org/io/IO_0000004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "The form of address for a woman."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@language" : "en",
+    "@value" : "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value FRAU, EN \"Ms\" / DE \"Frau\"."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
+    "@language" : "de",
+    "@value" : "Frau"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
+    "@language" : "en",
+    "@value" : "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value FRAU."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.openfaster.org/io/IO_0000003"
+  } ]
+}, {
+  "@id" : "https://purl.openfaster.org/io/IO_0000005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "The form of address for a man."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@language" : "en",
+    "@value" : "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value HERR, EN \"Mr\" / DE \"Herr\"."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
+    "@language" : "de",
+    "@value" : "Herr"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
+    "@language" : "en",
+    "@value" : "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value HERR."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mr."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.openfaster.org/io/IO_0000003"
+  } ]
+}, {
+  "@id" : "https://purl.openfaster.org/io/IO_0000006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "The absence of a form of address, for an individual for whom none applies or is indicated."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@language" : "en",
+    "@value" : "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value KEINE_ANREDE, EN \"No form of address/no indication\" / DE \"keine Anrede\"."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
+    "@language" : "de",
+    "@value" : "keine Anrede"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
+    "@language" : "en",
+    "@value" : "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value KEINE_ANREDE."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "No form of address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://purl.openfaster.org/io/IO_0000003"
+  } ]
+}, {
   "@id" : "https://purl.openfaster.org/io/institutional-ontology.owl",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/description" : [ {

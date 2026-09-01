@@ -1039,6 +1039,42 @@ _:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://purl.openfaster.org/io/IO_0000002> <http://purl.obolibrary.org/obo/IAO_0000119> "MiKaDiv: ThirdPartyDisclosureRequest.xsd, IndividualPersonType.LastName. KaFE: kafe-standardtypes.xsd, NatP_Struct.Nachname and Ansprechperson_Struct.Nachname."@en .
 <https://purl.openfaster.org/io/IO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "Last name"@en .
 # 
+# https://purl.openfaster.org/io/IO_0000003
+<https://purl.openfaster.org/io/IO_0000003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/io/IO_0000003> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> .
+<https://purl.openfaster.org/io/IO_0000003> <http://purl.obolibrary.org/obo/IAO_0000115> "A formal salutation used to address an individual, indicating their preferred title or the absence of one."@en .
+<https://purl.openfaster.org/io/IO_0000003> <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, NatP_Struct): Anrede, type Anrede_ENUM. Three permitted values, each modeled as its own subconcept (IO:0000004/0000005/0000006) rather than an opaque string enumeration, since each carries real meaning of its own. No MiKaDiv equivalent exists -- MiKaDiv's ThirdPartyDisclosureRequest.xsd has only a free-text Title field (a different concept: an honorific/qualification like \"Dr.\", not a form of address), so this concept is KaFE-only, unlike IO:0000001/IO:0000002."@en .
+<https://purl.openfaster.org/io/IO_0000003> <http://purl.obolibrary.org/obo/IAO_0000118> "Anredeform"@de .
+<https://purl.openfaster.org/io/IO_0000003> <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, NatP_Struct.Anrede and Anrede_ENUM."@en .
+<https://purl.openfaster.org/io/IO_0000003> <http://www.w3.org/2000/01/rdf-schema#label> "Form of address"@en .
+# 
+# https://purl.openfaster.org/io/IO_0000004
+<https://purl.openfaster.org/io/IO_0000004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/io/IO_0000004> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.openfaster.org/io/IO_0000003> .
+<https://purl.openfaster.org/io/IO_0000004> <http://purl.obolibrary.org/obo/IAO_0000115> "The form of address for a woman."@en .
+<https://purl.openfaster.org/io/IO_0000004> <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value FRAU, EN \"Ms\" / DE \"Frau\"."@en .
+<https://purl.openfaster.org/io/IO_0000004> <http://purl.obolibrary.org/obo/IAO_0000118> "Frau"@de .
+<https://purl.openfaster.org/io/IO_0000004> <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value FRAU."@en .
+<https://purl.openfaster.org/io/IO_0000004> <http://www.w3.org/2000/01/rdf-schema#label> "Ms."@en .
+# 
+# https://purl.openfaster.org/io/IO_0000005
+<https://purl.openfaster.org/io/IO_0000005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/io/IO_0000005> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.openfaster.org/io/IO_0000003> .
+<https://purl.openfaster.org/io/IO_0000005> <http://purl.obolibrary.org/obo/IAO_0000115> "The form of address for a man."@en .
+<https://purl.openfaster.org/io/IO_0000005> <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value HERR, EN \"Mr\" / DE \"Herr\"."@en .
+<https://purl.openfaster.org/io/IO_0000005> <http://purl.obolibrary.org/obo/IAO_0000118> "Herr"@de .
+<https://purl.openfaster.org/io/IO_0000005> <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value HERR."@en .
+<https://purl.openfaster.org/io/IO_0000005> <http://www.w3.org/2000/01/rdf-schema#label> "Mr."@en .
+# 
+# https://purl.openfaster.org/io/IO_0000006
+<https://purl.openfaster.org/io/IO_0000006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/io/IO_0000006> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.openfaster.org/io/IO_0000003> .
+<https://purl.openfaster.org/io/IO_0000006> <http://purl.obolibrary.org/obo/IAO_0000115> "The absence of a form of address, for an individual for whom none applies or is indicated."@en .
+<https://purl.openfaster.org/io/IO_0000006> <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value KEINE_ANREDE, EN \"No form of address/no indication\" / DE \"keine Anrede\"."@en .
+<https://purl.openfaster.org/io/IO_0000006> <http://purl.obolibrary.org/obo/IAO_0000118> "keine Anrede"@de .
+<https://purl.openfaster.org/io/IO_0000006> <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value KEINE_ANREDE."@en .
+<https://purl.openfaster.org/io/IO_0000006> <http://www.w3.org/2000/01/rdf-schema#label> "No form of address"@en .
+# 
 # 
 # 
 # #################################################################

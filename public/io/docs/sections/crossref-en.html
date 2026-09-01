@@ -1,327 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="resources/primer.css" media="screen"/>
-<link rel="stylesheet" href="resources/rec.css" media="screen"/>
-<link rel="stylesheet" href="resources/extra.css" media="screen"/>
-<link rel="stylesheet" href="resources/owl.css" media="screen"/>
-<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
-<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
-<link rel="stylesheet" href="resources/slider.css" media="screen"/>
-<meta name="color-scheme" content="dark light">
-<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
-	<dark-mode-toggle class="slider"></dark-mode-toggle>
-</div>
- <title>Institutional Ontology</title>
-
-
-<!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purl.openfaster.org/io/institutional-ontology.owl","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purl.openfaster.org/io/institutional-ontology.owl","name":"Institutional Ontology", "headline":"Document describing the ontology https://purl.openfaster.org/io/institutional-ontology.owl", "dateReleased":"Tue Sep 01 10:24:35 UTC 2026", "license":"https://creativecommons.org/licenses/by/4.0/"}</script>
-
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
-function loadHash() {
-  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
-	var hash = location.hash;
-	if($(hash).offset()!=null){
-	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
-}
-	loadTOC();
-}
-function loadTOC(){
-	//process toc dynamically
-	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
-	  jQuery(".list").each(function(){
-		if(jQuery(this).is('h2')){
-			if(j>0){
-				t+='</ul>';
-				j=0;
-			}
-			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-			i++;
-		}
-		if(jQuery(this).is('h3')){
-			if(j==0){
-				t+='<ul>';
-			}
-			j++;
-			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-		}
-	  });
-	  t+='</ul>';
-	  $("#toc").html(t); 
-}
-$(function(){
-    loadHash();
-}); $.fn.ignore = function(sel){
-        return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
-
-<body>
-<div class="container">
-<div class="head">
-<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
-<h1>Institutional Ontology</h1>
-
-
-<dl>
-<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
-</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd> Institutional Ontology.</dd>
-</dl>
-
-<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
-</div>
-<div class="status">
-<div>
-<span>Ontology Specification Draft</span>
-</div>
-</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
-</div>
-<div id="toc"></div> 
-
-<!--INTRODUCTION SECTION-->
-    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
-</div>
-  
-
-<!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">Institutional Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This ontology has the following classes and properties.</span>
-<h4>Classes</h4>
-<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#https://purl.openfaster.org/io/IO_0000001" title="https://purl.openfaster.org/io/IO_0000001">All given names</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/COB_0000035" title="http://purl.obolibrary.org/obo/COB_0000035">completely executed planned process</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000002" title="http://purl.obolibrary.org/obo/BFO_0000002">continuant</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000078" title="http://purl.obolibrary.org/obo/IAO_0000078">curation status specification</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000102" title="http://purl.obolibrary.org/obo/IAO_0000102">data about an ontology part</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000027" title="http://purl.obolibrary.org/obo/IAO_0000027">data entity</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000409" title="http://purl.obolibrary.org/obo/IAO_0000409">denotator type</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000016" title="http://purl.obolibrary.org/obo/BFO_0000016">disposition</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000310" title="http://purl.obolibrary.org/obo/IAO_0000310">document</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000001" title="http://purl.obolibrary.org/obo/BFO_0000001">entity</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000034" title="http://purl.obolibrary.org/obo/BFO_0000034">function</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000031" title="http://purl.obolibrary.org/obo/BFO_0000031">generically dependent continuant</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0020000" title="http://purl.obolibrary.org/obo/IAO_0020000">identifier</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0020010" title="http://purl.obolibrary.org/obo/IAO_0020010">identifier creating process</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000004" title="http://purl.obolibrary.org/obo/BFO_0000004">independent continuant</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000030" title="http://purl.obolibrary.org/obo/IAO_0000030">information content entity</a>
-   </li>
-   <li>
-      <a href="#https://purl.openfaster.org/io/IO_0000002" title="https://purl.openfaster.org/io/IO_0000002">Last name</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000225" title="http://purl.obolibrary.org/obo/IAO_0000225">obsolescence reason specification</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000003" title="http://purl.obolibrary.org/obo/BFO_0000003">occurrent</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/COB_0000082" title="http://purl.obolibrary.org/obo/COB_0000082">planned process</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000015" title="http://purl.obolibrary.org/obo/BFO_0000015">process</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000311" title="http://purl.obolibrary.org/obo/IAO_0000311">publication</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000444" title="http://purl.obolibrary.org/obo/IAO_0000444">publishing process</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000019" title="http://purl.obolibrary.org/obo/BFO_0000019">quality</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000017" title="http://purl.obolibrary.org/obo/BFO_0000017">realizable entity</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000023" title="http://purl.obolibrary.org/obo/BFO_0000023">role</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/BFO_0000020" title="http://purl.obolibrary.org/obo/BFO_0000020">specifically dependent continuant</a>
-   </li>
-</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000052" title="http://purl.obolibrary.org/obo/RO_0000052">characteristic of</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000235" title="http://purl.obolibrary.org/obo/IAO_0000235">denoted by</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000219" title="http://purl.obolibrary.org/obo/IAO_0000219">denotes</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000092" title="http://purl.obolibrary.org/obo/RO_0000092">disposition of</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000079" title="http://purl.obolibrary.org/obo/RO_0000079">function of</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000053" title="http://purl.obolibrary.org/obo/RO_0000053">has characteristic</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000091" title="http://purl.obolibrary.org/obo/RO_0000091">has disposition</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000085" title="http://purl.obolibrary.org/obo/RO_0000085">has function</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000057" title="http://purl.obolibrary.org/obo/RO_0000057">has participant</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000086" title="http://purl.obolibrary.org/obo/RO_0000086">has quality</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000087" title="http://purl.obolibrary.org/obo/RO_0000087">has role</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/OBI_0000299" title="http://purl.obolibrary.org/obo/OBI_0000299">has specified output</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000136" title="http://purl.obolibrary.org/obo/IAO_0000136">is about</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/OBI_0000312" title="http://purl.obolibrary.org/obo/OBI_0000312">is specified output of</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000056" title="http://purl.obolibrary.org/obo/RO_0000056">participates in</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000080" title="http://purl.obolibrary.org/obo/RO_0000080">quality of</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/RO_0000081" title="http://purl.obolibrary.org/obo/RO_0000081">role of</a>
-   </li>
-</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000420" title="http://purl.obolibrary.org/obo/IAO_0000420">defined class</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/OMO_0001002" title="http://purl.obolibrary.org/obo/OMO_0001002">domain entity does not exist</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000002" title="http://purl.obolibrary.org/obo/IAO_0000002">example to be eventually removed</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000103" title="http://purl.obolibrary.org/obo/IAO_0000103">failed exploratory term</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000120" title="http://purl.obolibrary.org/obo/IAO_0000120">metadata complete</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000123" title="http://purl.obolibrary.org/obo/IAO_0000123">metadata incomplete</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000421" title="http://purl.obolibrary.org/obo/IAO_0000421">named class expression</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000121" title="http://purl.obolibrary.org/obo/IAO_0000121">organizational term</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/OMO_0001000" title="http://purl.obolibrary.org/obo/OMO_0001000">out of scope</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000125" title="http://purl.obolibrary.org/obo/IAO_0000125">pending final vetting</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000226" title="http://purl.obolibrary.org/obo/IAO_0000226">placeholder removed</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000122" title="http://purl.obolibrary.org/obo/IAO_0000122">ready for release</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000428" title="http://purl.obolibrary.org/obo/IAO_0000428">requires discussion</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000228" title="http://purl.obolibrary.org/obo/IAO_0000228">term imported</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000229" title="http://purl.obolibrary.org/obo/IAO_0000229">term split</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000227" title="http://purl.obolibrary.org/obo/IAO_0000227">terms merged</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000423" title="http://purl.obolibrary.org/obo/IAO_0000423">to be replaced with external ontology term</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000124" title="http://purl.obolibrary.org/obo/IAO_0000124">uncurated</a>
-   </li>
-   <li>
-      <a href="#http://purl.obolibrary.org/obo/IAO_0000410" title="http://purl.obolibrary.org/obo/IAO_0000410">universal</a>
-   </li>
-</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#d4e2868">Rule #1</a>
-   </li>
-   <li>
-      <a href="#d4e2941">Rule #2</a>
-   </li>
-   <li>
-      <a href="#d4e3014">Rule #3</a>
-   </li>
-   <li>
-      <a href="#d4e3087">Rule #4</a>
-   </li>
-</ul>
-</div>
-  
-
-<!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">Institutional Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-
-<span class="markdown">A controlled vocabulary of formal/administrative (institutional, in Searle's sense) concepts, starting with German tax-reporting field alignment across the MiKaDiv and KaFE schemas.</span></div>
-   
-
-<!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Institutional Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross-reference for Institutional Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Institutional Ontology.
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
@@ -336,6 +13,7 @@ This section provides details for each class and property defined by Institution
   <li><a href="#http://purl.obolibrary.org/obo/BFO_0000016" title="http://purl.obolibrary.org/obo/BFO_0000016">disposition</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/IAO_0000310" title="http://purl.obolibrary.org/obo/IAO_0000310">document</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/BFO_0000001" title="http://purl.obolibrary.org/obo/BFO_0000001">entity</a></li>
+  <li><a href="#https://purl.openfaster.org/io/IO_0000003" title="https://purl.openfaster.org/io/IO_0000003">Form of address</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/BFO_0000034" title="http://purl.obolibrary.org/obo/BFO_0000034">function</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/BFO_0000031" title="http://purl.obolibrary.org/obo/BFO_0000031">generically dependent continuant</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/IAO_0020000" title="http://purl.obolibrary.org/obo/IAO_0020000">identifier</a></li>
@@ -343,6 +21,9 @@ This section provides details for each class and property defined by Institution
   <li><a href="#http://purl.obolibrary.org/obo/BFO_0000004" title="http://purl.obolibrary.org/obo/BFO_0000004">independent continuant</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/IAO_0000030" title="http://purl.obolibrary.org/obo/IAO_0000030">information content entity</a></li>
   <li><a href="#https://purl.openfaster.org/io/IO_0000002" title="https://purl.openfaster.org/io/IO_0000002">Last name</a></li>
+  <li><a href="#https://purl.openfaster.org/io/IO_0000005" title="https://purl.openfaster.org/io/IO_0000005">Mr.</a></li>
+  <li><a href="#https://purl.openfaster.org/io/IO_0000004" title="https://purl.openfaster.org/io/IO_0000004">Ms.</a></li>
+  <li><a href="#https://purl.openfaster.org/io/IO_0000006" title="https://purl.openfaster.org/io/IO_0000006">No form of address</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/IAO_0000225" title="http://purl.obolibrary.org/obo/IAO_0000225">obsolescence reason specification</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/BFO_0000003" title="http://purl.obolibrary.org/obo/BFO_0000003">occurrent</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/COB_0000082" title="http://purl.obolibrary.org/obo/COB_0000082">planned process</a></li>
@@ -742,6 +423,35 @@ This section provides details for each class and property defined by Institution
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://purl.openfaster.org/io/IO_0000003">
+  <h3>Form of address<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/io/IO_0000003</p>
+  <div class="comment">
+   <span class="markdown">A formal salutation used to address an individual, indicating their preferred title or the absence of one.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    KaFE: kafe-standardtypes.xsd, NatP_Struct.Anrede and Anrede_ENUM.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://purl.obolibrary.org/obo/IAO_0000030" title="http://purl.obolibrary.org/obo/IAO_0000030">information content entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/io/IO_0000005" title="https://purl.openfaster.org/io/IO_0000005">Mr.</a> <sup class="type-c" title="class">c</sup>, <a href="#https://purl.openfaster.org/io/IO_0000004" title="https://purl.openfaster.org/io/IO_0000004">Ms.</a> <sup class="type-c" title="class">c</sup>, <a href="#https://purl.openfaster.org/io/IO_0000006" title="https://purl.openfaster.org/io/IO_0000006">No form of address</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://purl.obolibrary.org/obo/BFO_0000034">
   <h3>function<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/BFO_0000034</p>
@@ -1015,7 +725,7 @@ This section provides details for each class and property defined by Institution
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://purl.openfaster.org/io/IO_0000001" title="https://purl.openfaster.org/io/IO_0000001">All given names</a> <sup class="type-c" title="class">c</sup>, <a href="#https://purl.openfaster.org/io/IO_0000002" title="https://purl.openfaster.org/io/IO_0000002">Last name</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.obolibrary.org/obo/IAO_0000027" title="http://purl.obolibrary.org/obo/IAO_0000027">data entity</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.obolibrary.org/obo/IAO_0000310" title="http://purl.obolibrary.org/obo/IAO_0000310">document</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.obolibrary.org/obo/IAO_0020000" title="http://purl.obolibrary.org/obo/IAO_0020000">identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://purl.openfaster.org/io/IO_0000001" title="https://purl.openfaster.org/io/IO_0000001">All given names</a> <sup class="type-c" title="class">c</sup>, <a href="#https://purl.openfaster.org/io/IO_0000003" title="https://purl.openfaster.org/io/IO_0000003">Form of address</a> <sup class="type-c" title="class">c</sup>, <a href="#https://purl.openfaster.org/io/IO_0000002" title="https://purl.openfaster.org/io/IO_0000002">Last name</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.obolibrary.org/obo/IAO_0000027" title="http://purl.obolibrary.org/obo/IAO_0000027">data entity</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.obolibrary.org/obo/IAO_0000310" title="http://purl.obolibrary.org/obo/IAO_0000310">document</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.obolibrary.org/obo/IAO_0020000" title="http://purl.obolibrary.org/obo/IAO_0020000">identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -1051,6 +761,75 @@ This section provides details for each class and property defined by Institution
    </dt>
    <dd>
     <a href="#http://purl.obolibrary.org/obo/IAO_0000030" title="http://purl.obolibrary.org/obo/IAO_0000030">information content entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/io/IO_0000005">
+  <h3>Mr.<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/io/IO_0000005</p>
+  <div class="comment">
+   <span class="markdown">The form of address for a man.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value HERR.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/io/IO_0000003" title="https://purl.openfaster.org/io/IO_0000003">Form of address</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/io/IO_0000004">
+  <h3>Ms.<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/io/IO_0000004</p>
+  <div class="comment">
+   <span class="markdown">The form of address for a woman.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value FRAU.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/io/IO_0000003" title="https://purl.openfaster.org/io/IO_0000003">Form of address</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/io/IO_0000006">
+  <h3>No form of address<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/io/IO_0000006</p>
+  <div class="comment">
+   <span class="markdown">The absence of a form of address, for an individual for whom none applies or is indicated.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value KEINE_ANREDE.
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/io/IO_0000003" title="https://purl.openfaster.org/io/IO_0000003">Form of address</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2867,24 +2646,24 @@ This section provides details for each class and property defined by Institution
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
  <h3 id="swrlrules" class="list">SWRL rules</h3>
  <ul class="hlist">
-  <li><a href="#d4e2868">Rule #1</a></li>
-  <li><a href="#d4e2941">Rule #2</a></li>
-  <li><a href="#d4e3014">Rule #3</a></li>
-  <li><a href="#d4e3087">Rule #4</a></li>
+  <li><a href="#d4e2961">Rule #1</a></li>
+  <li><a href="#d4e3034">Rule #2</a></li>
+  <li><a href="#d4e3107">Rule #3</a></li>
+  <li><a href="#d4e3180">Rule #4</a></li>
  </ul>
- <div class="entity" id="d4e2868">
+ <div class="entity" id="d4e2961">
   <h3>Rule #1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
   <p><a href="#http://purl.obolibrary.org/obo/RO_0000053" title="http://purl.obolibrary.org/obo/RO_0000053">has characteristic</a> <sup class="type-op" title="object property">op</sup>(?e,?d) , <a href="#http://purl.obolibrary.org/obo/BFO_0000019" title="http://purl.obolibrary.org/obo/BFO_0000019">quality</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#http://purl.obolibrary.org/obo/RO_0000086" title="http://purl.obolibrary.org/obo/RO_0000086">has quality</a> <sup class="type-op" title="object property">op</sup>(?e,?d)</p>
  </div>
- <div class="entity" id="d4e2941">
+ <div class="entity" id="d4e3034">
   <h3>Rule #2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
   <p><a href="#http://purl.obolibrary.org/obo/RO_0000053" title="http://purl.obolibrary.org/obo/RO_0000053">has characteristic</a> <sup class="type-op" title="object property">op</sup>(?e,?d) , <a href="#http://purl.obolibrary.org/obo/BFO_0000023" title="http://purl.obolibrary.org/obo/BFO_0000023">role</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#http://purl.obolibrary.org/obo/RO_0000087" title="http://purl.obolibrary.org/obo/RO_0000087">has role</a> <sup class="type-op" title="object property">op</sup>(?e,?d)</p>
  </div>
- <div class="entity" id="d4e3014">
+ <div class="entity" id="d4e3107">
   <h3>Rule #3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
   <p><a href="#http://purl.obolibrary.org/obo/RO_0000053" title="http://purl.obolibrary.org/obo/RO_0000053">has characteristic</a> <sup class="type-op" title="object property">op</sup>(?e,?d) , <a href="#http://purl.obolibrary.org/obo/BFO_0000034" title="http://purl.obolibrary.org/obo/BFO_0000034">function</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#http://purl.obolibrary.org/obo/RO_0000085" title="http://purl.obolibrary.org/obo/RO_0000085">has function</a> <sup class="type-op" title="object property">op</sup>(?e,?d)</p>
  </div>
- <div class="entity" id="d4e3087">
+ <div class="entity" id="d4e3180">
   <h3>Rule #4<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
   <p><a href="#http://purl.obolibrary.org/obo/RO_0000053" title="http://purl.obolibrary.org/obo/RO_0000053">has characteristic</a> <sup class="type-op" title="object property">op</sup>(?e,?d) , <a href="#http://purl.obolibrary.org/obo/BFO_0000016" title="http://purl.obolibrary.org/obo/BFO_0000016">disposition</a> <sup class="type-c" title="class">c</sup>(?d) -&gt; <a href="#http://purl.obolibrary.org/obo/RO_0000091" title="http://purl.obolibrary.org/obo/RO_0000091">has disposition</a> <sup class="type-op" title="object property">op</sup>(?e,?d)</p>
  </div>
@@ -2897,23 +2676,3 @@ This section provides details for each class and property defined by Institution
 <sup class="type-ep" title="External Properties">ep</sup>: External Properties
 </div>
 </div>
-</div>
-    
-
-<!--REFERENCES SECTION-->
-  <div id="references">
-<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
-
-</div>
-<div id="acknowledgments">
-<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<p>
-The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
-</div>
-
-
-</div>
-</body>
-</html>

@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/io/institutional-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/institutional-ontology/v0.1.0/institutional-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/institutional-ontology/v0.2.0/institutional-ontology.owl",
       "permanent": false
     },
     {
