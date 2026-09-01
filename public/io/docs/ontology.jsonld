@@ -3343,7 +3343,7 @@
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
     "@language" : "en",
-    "@value" : "KaFE XSD (kafe-standardtypes.xsd, NatP_Struct): Anrede, type Anrede_ENUM. Three permitted values, each modeled as its own subconcept (IO:0000004/0000005/0000006) rather than an opaque string enumeration, since each carries real meaning of its own. No MiKaDiv equivalent exists -- MiKaDiv's ThirdPartyDisclosureRequest.xsd has only a free-text Title field (a different concept: an honorific/qualification like \"Dr.\", not a form of address), so this concept is KaFE-only, unlike IO:0000001/IO:0000002."
+    "@value" : "KaFE XSD (kafe-standardtypes.xsd, NatP_Struct): Anrede, type Anrede_ENUM. Three permitted values, each modeled as a named individual of this class (IO:0000004/0000005/0000006), not a subclass -- corrected 2026-09-01 after research into real OBO/SKOS precedent for closed, non-hierarchical, never-extended enumerations (OBI's own categorical-value pattern; SKOS's skos:Concept is explicitly an individual, never a class, for exactly this scenario). \"Mr.\" is one value drawn from this category, not a kind of it. No MiKaDiv equivalent exists -- MiKaDiv's ThirdPartyDisclosureRequest.xsd has only a free-text Title field (a different concept: an honorific/qualification like \"Dr.\", not a form of address), so this concept is KaFE-only, unlike IO:0000001/IO:0000002."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
     "@language" : "de",
@@ -3362,7 +3362,7 @@
   } ]
 }, {
   "@id" : "https://purl.openfaster.org/io/IO_0000004",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "The form of address for a woman."
@@ -3379,16 +3379,16 @@
     "@language" : "en",
     "@value" : "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value FRAU."
   } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.openfaster.org/io/IO_0000003"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Ms."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.openfaster.org/io/IO_0000003"
   } ]
 }, {
   "@id" : "https://purl.openfaster.org/io/IO_0000005",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "The form of address for a man."
@@ -3405,16 +3405,16 @@
     "@language" : "en",
     "@value" : "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value HERR."
   } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.openfaster.org/io/IO_0000003"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Mr."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.openfaster.org/io/IO_0000003"
   } ]
 }, {
   "@id" : "https://purl.openfaster.org/io/IO_0000006",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "The absence of a form of address, for an individual for whom none applies or is indicated."
@@ -3431,12 +3431,12 @@
     "@language" : "en",
     "@value" : "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value KEINE_ANREDE."
   } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.openfaster.org/io/IO_0000003"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "No form of address"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://purl.openfaster.org/io/IO_0000003"
   } ]
 }, {
   "@id" : "https://purl.openfaster.org/io/institutional-ontology.owl",

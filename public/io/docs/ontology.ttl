@@ -1165,40 +1165,10 @@ Previous. An information content entity is a non-realizable information entity t
 <https://purl.openfaster.org/io/IO_0000003> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A formal salutation used to address an individual, indicating their preferred title or the absence of one."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, NatP_Struct): Anrede, type Anrede_ENUM. Three permitted values, each modeled as its own subconcept (IO:0000004/0000005/0000006) rather than an opaque string enumeration, since each carries real meaning of its own. No MiKaDiv equivalent exists -- MiKaDiv's ThirdPartyDisclosureRequest.xsd has only a free-text Title field (a different concept: an honorific/qualification like \"Dr.\", not a form of address), so this concept is KaFE-only, unlike IO:0000001/IO:0000002."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, NatP_Struct): Anrede, type Anrede_ENUM. Three permitted values, each modeled as a named individual of this class (IO:0000004/0000005/0000006), not a subclass -- corrected 2026-09-01 after research into real OBO/SKOS precedent for closed, non-hierarchical, never-extended enumerations (OBI's own categorical-value pattern; SKOS's skos:Concept is explicitly an individual, never a class, for exactly this scenario). \"Mr.\" is one value drawn from this category, not a kind of it. No MiKaDiv equivalent exists -- MiKaDiv's ThirdPartyDisclosureRequest.xsd has only a free-text Title field (a different concept: an honorific/qualification like \"Dr.\", not a form of address), so this concept is KaFE-only, unlike IO:0000001/IO:0000002."@en ;
                                             <http://purl.obolibrary.org/obo/IAO_0000118> "Anredeform"@de ;
                                             <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, NatP_Struct.Anrede and Anrede_ENUM."@en ;
                                             rdfs:label "Form of address"@en .
-
-
-###  https://purl.openfaster.org/io/IO_0000004
-<https://purl.openfaster.org/io/IO_0000004> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.openfaster.org/io/IO_0000003> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The form of address for a woman."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value FRAU, EN \"Ms\" / DE \"Frau\"."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "Frau"@de ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value FRAU."@en ;
-                                            rdfs:label "Ms."@en .
-
-
-###  https://purl.openfaster.org/io/IO_0000005
-<https://purl.openfaster.org/io/IO_0000005> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.openfaster.org/io/IO_0000003> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The form of address for a man."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value HERR, EN \"Mr\" / DE \"Herr\"."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "Herr"@de ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value HERR."@en ;
-                                            rdfs:label "Mr."@en .
-
-
-###  https://purl.openfaster.org/io/IO_0000006
-<https://purl.openfaster.org/io/IO_0000006> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.openfaster.org/io/IO_0000003> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The absence of a form of address, for an individual for whom none applies or is indicated."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value KEINE_ANREDE, EN \"No form of address/no indication\" / DE \"keine Anrede\"."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "keine Anrede"@de ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value KEINE_ANREDE."@en ;
-                                            rdfs:label "No form of address"@en .
 
 
 #################################################################
@@ -1388,6 +1358,36 @@ Previous. An information content entity is a non-realizable information entity t
                                              <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/ontology-metadata/issues/136" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000234> "https://orcid.org/0000-0002-4142-7153" ;
                                              rdfs:label "domain entity does not exist" .
+
+
+###  https://purl.openfaster.org/io/IO_0000004
+<https://purl.openfaster.org/io/IO_0000004> rdf:type owl:NamedIndividual ,
+                                                     <https://purl.openfaster.org/io/IO_0000003> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The form of address for a woman."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value FRAU, EN \"Ms\" / DE \"Frau\"."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000118> "Frau"@de ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value FRAU."@en ;
+                                            rdfs:label "Ms."@en .
+
+
+###  https://purl.openfaster.org/io/IO_0000005
+<https://purl.openfaster.org/io/IO_0000005> rdf:type owl:NamedIndividual ,
+                                                     <https://purl.openfaster.org/io/IO_0000003> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The form of address for a man."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value HERR, EN \"Mr\" / DE \"Herr\"."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000118> "Herr"@de ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value HERR."@en ;
+                                            rdfs:label "Mr."@en .
+
+
+###  https://purl.openfaster.org/io/IO_0000006
+<https://purl.openfaster.org/io/IO_0000006> rdf:type owl:NamedIndividual ,
+                                                     <https://purl.openfaster.org/io/IO_0000003> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The absence of a form of address, for an individual for whom none applies or is indicated."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000116> "KaFE XSD (kafe-standardtypes.xsd, Anrede_ENUM): enumeration value KEINE_ANREDE, EN \"No form of address/no indication\" / DE \"keine Anrede\"."@en ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000118> "keine Anrede"@de ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000119> "KaFE: kafe-standardtypes.xsd, Anrede_ENUM enumeration value KEINE_ANREDE."@en ;
+                                            rdfs:label "No form of address"@en .
 
 
 #################################################################
