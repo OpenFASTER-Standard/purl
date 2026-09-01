@@ -39,6 +39,21 @@
       "source": "/realizations",
       "destination": "https://github.com/OpenFASTER-Standard/realizations",
       "permanent": false
+    },
+    {
+      "source": "/sso/spreadsheet-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/spreadsheet-ontology/v0.1.0/spreadsheet-ontology.owl",
+      "permanent": false
+    },
+    {
+      "source": "/sso/:id",
+      "destination": "/sso/docs/#https://purl.openfaster.org/sso/:id",
+      "permanent": false
+    },
+    {
+      "source": "/sso",
+      "destination": "https://github.com/OpenFASTER-Standard/spreadsheet-ontology",
+      "permanent": false
     }
   ]
 }

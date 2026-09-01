@@ -1,0 +1,206 @@
+<https://purl.openfaster.org/sso/spreadsheet-ontology.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://purl.openfaster.org/sso/spreadsheet-ontology.owl> <http://purl.org/dc/elements/1.1/description> "An OWL vocabulary for spreadsheet structure. A raw, structure-agnostic Workbook/Sheet/Cell grid (no header or column meaning assumed) plus a separate, still domain-agnostic semantic layout layer (HeaderCell/DataColumn) for describing structure only where it is actually known. Concept-linking is not part of this vocabulary -- see the `realizations` repo's ofr:realizesConcept for that."@en .
+<https://purl.openfaster.org/sso/spreadsheet-ontology.owl> <http://purl.org/dc/elements/1.1/title> "Spreadsheet Ontology"@en .
+<https://purl.openfaster.org/sso/spreadsheet-ontology.owl> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://purl.openfaster.org/sso/hasCell
+<https://purl.openfaster.org/sso/hasCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.openfaster.org/sso/hasCell> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Sheet> .
+<https://purl.openfaster.org/sso/hasCell> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.openfaster.org/sso/Cell> .
+<https://purl.openfaster.org/sso/hasCell> <http://www.w3.org/2000/01/rdf-schema#label> "has cell"@en .
+# 
+# https://purl.openfaster.org/sso/hasSheet
+<https://purl.openfaster.org/sso/hasSheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.openfaster.org/sso/hasSheet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Workbook> .
+<https://purl.openfaster.org/sso/hasSheet> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.openfaster.org/sso/Sheet> .
+<https://purl.openfaster.org/sso/hasSheet> <http://www.w3.org/2000/01/rdf-schema#label> "has sheet"@en .
+# 
+# https://purl.openfaster.org/sso/headerCell
+<https://purl.openfaster.org/sso/headerCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.openfaster.org/sso/headerCell> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/DataColumn> .
+<https://purl.openfaster.org/sso/headerCell> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.openfaster.org/sso/HeaderCell> .
+<https://purl.openfaster.org/sso/headerCell> <http://www.w3.org/2000/01/rdf-schema#label> "header cell"@en .
+# 
+# https://purl.openfaster.org/sso/sheet
+<https://purl.openfaster.org/sso/sheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.openfaster.org/sso/sheet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/DataColumn> .
+<https://purl.openfaster.org/sso/sheet> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.openfaster.org/sso/Sheet> .
+<https://purl.openfaster.org/sso/sheet> <http://www.w3.org/2000/01/rdf-schema#label> "sheet"@en .
+# 
+# https://purl.openfaster.org/sso/valueType
+<https://purl.openfaster.org/sso/valueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.openfaster.org/sso/valueType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Cell> .
+<https://purl.openfaster.org/sso/valueType> <http://www.w3.org/2000/01/rdf-schema#label> "value type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://purl.openfaster.org/sso/columnIndex
+<https://purl.openfaster.org/sso/columnIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/columnIndex> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.openfaster.org/sso/DataColumn> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.openfaster.org/sso/Cell> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/sso/columnIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://purl.openfaster.org/sso/columnIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "1-based column position, matching Excel's own convention. Used on both Cell (its actual position) and DataColumn (a positional layout's fixed target column)."@en .
+<https://purl.openfaster.org/sso/columnIndex> <http://www.w3.org/2000/01/rdf-schema#label> "column index"@en .
+# 
+# https://purl.openfaster.org/sso/dataEndRow
+<https://purl.openfaster.org/sso/dataEndRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/dataEndRow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/DataColumn> .
+<https://purl.openfaster.org/sso/dataEndRow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://purl.openfaster.org/sso/dataEndRow> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional. Absent means read until the first empty cell in the column."@en .
+<https://purl.openfaster.org/sso/dataEndRow> <http://www.w3.org/2000/01/rdf-schema#label> "data end row"@en .
+# 
+# https://purl.openfaster.org/sso/dataStartRow
+<https://purl.openfaster.org/sso/dataStartRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/dataStartRow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/DataColumn> .
+<https://purl.openfaster.org/sso/dataStartRow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://purl.openfaster.org/sso/dataStartRow> <http://www.w3.org/2000/01/rdf-schema#label> "data start row"@en .
+# 
+# https://purl.openfaster.org/sso/formula
+<https://purl.openfaster.org/sso/formula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/formula> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Cell> .
+<https://purl.openfaster.org/sso/formula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.openfaster.org/sso/formula> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw formula text. Only meaningful when sso:valueType is sso:formulaValue."@en .
+<https://purl.openfaster.org/sso/formula> <http://www.w3.org/2000/01/rdf-schema#label> "raw formula"@en .
+# 
+# https://purl.openfaster.org/sso/headerMatches
+<https://purl.openfaster.org/sso/headerMatches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/headerMatches> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/DataColumn> .
+<https://purl.openfaster.org/sso/headerMatches> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.openfaster.org/sso/headerMatches> <http://www.w3.org/2000/01/rdf-schema#comment> "Header text to search for, used instead of a fixed sso:columnIndex when the target file's layout isn't controlled by us -- position can't be assumed, so the column is located by its header text at ingestion time instead."@en .
+<https://purl.openfaster.org/sso/headerMatches> <http://www.w3.org/2000/01/rdf-schema#label> "header matches"@en .
+# 
+# https://purl.openfaster.org/sso/literalValue
+<https://purl.openfaster.org/sso/literalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/literalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Cell> .
+<https://purl.openfaster.org/sso/literalValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.openfaster.org/sso/literalValue> <http://www.w3.org/2000/01/rdf-schema#label> "literal value"@en .
+# 
+# https://purl.openfaster.org/sso/rowIndex
+<https://purl.openfaster.org/sso/rowIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/rowIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Cell> .
+<https://purl.openfaster.org/sso/rowIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://purl.openfaster.org/sso/rowIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "1-based row position, matching Excel's own convention."@en .
+<https://purl.openfaster.org/sso/rowIndex> <http://www.w3.org/2000/01/rdf-schema#label> "row index"@en .
+# 
+# https://purl.openfaster.org/sso/sheetName
+<https://purl.openfaster.org/sso/sheetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/sheetName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Sheet> .
+<https://purl.openfaster.org/sso/sheetName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.openfaster.org/sso/sheetName> <http://www.w3.org/2000/01/rdf-schema#label> "sheet name"@en .
+# 
+# https://purl.openfaster.org/sso/sheetPosition
+<https://purl.openfaster.org/sso/sheetPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/sso/sheetPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/sso/Sheet> .
+<https://purl.openfaster.org/sso/sheetPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://purl.openfaster.org/sso/sheetPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "1-based tab order within the Workbook. Explicit, like xsdo:particlePosition, for the same reason: RDF has no native ordering primitive worth trusting."@en .
+<https://purl.openfaster.org/sso/sheetPosition> <http://www.w3.org/2000/01/rdf-schema#label> "sheet position"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://purl.openfaster.org/sso/Cell
+<https://purl.openfaster.org/sso/Cell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/sso/Cell> <http://www.w3.org/2000/01/rdf-schema#comment> "A single addressable cell within a Sheet. No structural role (header, data) is assumed of any Cell by default."@en .
+<https://purl.openfaster.org/sso/Cell> <http://www.w3.org/2000/01/rdf-schema#label> "Cell"@en .
+# 
+# https://purl.openfaster.org/sso/DataColumn
+<https://purl.openfaster.org/sso/DataColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/sso/DataColumn> <http://www.w3.org/2000/01/rdf-schema#comment> "A vertical strip of cells holding one field's worth of data. Says nothing about which field -- that link is asserted separately, outside this vocabulary, via ofr:realizesConcept."@en .
+<https://purl.openfaster.org/sso/DataColumn> <http://www.w3.org/2000/01/rdf-schema#label> "Data Column"@en .
+# 
+# https://purl.openfaster.org/sso/HeaderCell
+<https://purl.openfaster.org/sso/HeaderCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/sso/HeaderCell> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.openfaster.org/sso/Cell> .
+<https://purl.openfaster.org/sso/HeaderCell> <http://www.w3.org/2000/01/rdf-schema#comment> "A Cell playing the header role for a DataColumn. Asserted only where a header is actually known to exist -- never assumed."@en .
+<https://purl.openfaster.org/sso/HeaderCell> <http://www.w3.org/2000/01/rdf-schema#label> "Header Cell"@en .
+# 
+# https://purl.openfaster.org/sso/Sheet
+<https://purl.openfaster.org/sso/Sheet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/sso/Sheet> <http://www.w3.org/2000/01/rdf-schema#comment> "One tab/page within a Workbook."@en .
+<https://purl.openfaster.org/sso/Sheet> <http://www.w3.org/2000/01/rdf-schema#label> "Sheet"@en .
+# 
+# https://purl.openfaster.org/sso/Workbook
+<https://purl.openfaster.org/sso/Workbook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/sso/Workbook> <http://www.w3.org/2000/01/rdf-schema#comment> "A single spreadsheet file, containing one or more Sheets."@en .
+<https://purl.openfaster.org/sso/Workbook> <http://www.w3.org/2000/01/rdf-schema#label> "Workbook"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://purl.openfaster.org/sso/booleanValue
+<https://purl.openfaster.org/sso/booleanValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.openfaster.org/sso/booleanValue> <http://www.w3.org/2000/01/rdf-schema#label> "boolean"@en .
+# 
+# https://purl.openfaster.org/sso/dateValue
+<https://purl.openfaster.org/sso/dateValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.openfaster.org/sso/dateValue> <http://www.w3.org/2000/01/rdf-schema#label> "date"@en .
+# 
+# https://purl.openfaster.org/sso/emptyValue
+<https://purl.openfaster.org/sso/emptyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.openfaster.org/sso/emptyValue> <http://www.w3.org/2000/01/rdf-schema#label> "empty"@en .
+# 
+# https://purl.openfaster.org/sso/formulaValue
+<https://purl.openfaster.org/sso/formulaValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.openfaster.org/sso/formulaValue> <http://www.w3.org/2000/01/rdf-schema#label> "formula"@en .
+# 
+# https://purl.openfaster.org/sso/numberValue
+<https://purl.openfaster.org/sso/numberValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.openfaster.org/sso/numberValue> <http://www.w3.org/2000/01/rdf-schema#label> "number"@en .
+# 
+# https://purl.openfaster.org/sso/stringValue
+<https://purl.openfaster.org/sso/stringValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.openfaster.org/sso/stringValue> <http://www.w3.org/2000/01/rdf-schema#label> "string"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

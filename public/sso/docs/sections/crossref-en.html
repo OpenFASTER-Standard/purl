@@ -1,0 +1,467 @@
+<h2 id="crossreference" class="list">Cross-reference for Spreadsheet Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Spreadsheet Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/HeaderCell" title="https://purl.openfaster.org/sso/HeaderCell">Header Cell</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/Sheet" title="https://purl.openfaster.org/sso/Sheet">Sheet</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/Workbook" title="https://purl.openfaster.org/sso/Workbook">Workbook</a></li>
+ </ul>
+ <div class="entity" id="https://purl.openfaster.org/sso/Cell">
+  <h3>Cell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/Cell</p>
+  <div class="comment">
+   <span class="markdown">A single addressable cell within a Sheet. No structural role (header, data) is assumed of any Cell by default.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/HeaderCell" title="https://purl.openfaster.org/sso/HeaderCell">Header Cell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/columnIndex" title="https://purl.openfaster.org/sso/columnIndex">column index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/literalValue" title="https://purl.openfaster.org/sso/literalValue">literal value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/formula" title="https://purl.openfaster.org/sso/formula">raw formula</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/rowIndex" title="https://purl.openfaster.org/sso/rowIndex">row index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/valueType" title="https://purl.openfaster.org/sso/valueType">value type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/hasCell" title="https://purl.openfaster.org/sso/hasCell">has cell</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/DataColumn">
+  <h3>Data Column<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/DataColumn</p>
+  <div class="comment">
+   <span class="markdown">A vertical strip of cells holding one field's worth of data. Says nothing about which field -- that link is asserted separately, outside this vocabulary, via ofr:realizesConcept.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/columnIndex" title="https://purl.openfaster.org/sso/columnIndex">column index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/dataEndRow" title="https://purl.openfaster.org/sso/dataEndRow">data end row</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/dataStartRow" title="https://purl.openfaster.org/sso/dataStartRow">data start row</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/headerCell" title="https://purl.openfaster.org/sso/headerCell">header cell</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/sso/headerMatches" title="https://purl.openfaster.org/sso/headerMatches">header matches</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/sheet" title="https://purl.openfaster.org/sso/sheet">sheet</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/HeaderCell">
+  <h3>Header Cell<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/HeaderCell</p>
+  <div class="comment">
+   <span class="markdown">A Cell playing the header role for a DataColumn. Asserted only where a header is actually known to exist -- never assumed.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/headerCell" title="https://purl.openfaster.org/sso/headerCell">header cell</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/Sheet">
+  <h3>Sheet<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/Sheet</p>
+  <div class="comment">
+   <span class="markdown">One tab/page within a Workbook.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/hasCell" title="https://purl.openfaster.org/sso/hasCell">has cell</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/sso/sheetName" title="https://purl.openfaster.org/sso/sheetName">sheet name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/sso/sheetPosition" title="https://purl.openfaster.org/sso/sheetPosition">sheet position</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/hasSheet" title="https://purl.openfaster.org/sso/hasSheet">has sheet</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/sso/sheet" title="https://purl.openfaster.org/sso/sheet">sheet</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/Workbook">
+  <h3>Workbook<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/Workbook</p>
+  <div class="comment">
+   <span class="markdown">A single spreadsheet file, containing one or more Sheets.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/sso/hasSheet" title="https://purl.openfaster.org/sso/hasSheet">has sheet</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://purl.openfaster.org/sso/hasCell" title="https://purl.openfaster.org/sso/hasCell">has cell</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/hasSheet" title="https://purl.openfaster.org/sso/hasSheet">has sheet</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/headerCell" title="https://purl.openfaster.org/sso/headerCell">header cell</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/sheet" title="https://purl.openfaster.org/sso/sheet">sheet</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/valueType" title="https://purl.openfaster.org/sso/valueType">value type</a></li>
+ </ul>
+ <div class="entity" id="https://purl.openfaster.org/sso/hasCell">
+  <h3>has cell<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/hasCell</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Sheet" title="https://purl.openfaster.org/sso/Sheet">Sheet</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/hasSheet">
+  <h3>has sheet<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/hasSheet</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Workbook" title="https://purl.openfaster.org/sso/Workbook">Workbook</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Sheet" title="https://purl.openfaster.org/sso/Sheet">Sheet</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/headerCell">
+  <h3>header cell<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/headerCell</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/HeaderCell" title="https://purl.openfaster.org/sso/HeaderCell">Header Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/sheet">
+  <h3>sheet<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/sheet</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Sheet" title="https://purl.openfaster.org/sso/Sheet">Sheet</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/valueType">
+  <h3>value type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/valueType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://purl.openfaster.org/sso/columnIndex" title="https://purl.openfaster.org/sso/columnIndex">column index</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/dataEndRow" title="https://purl.openfaster.org/sso/dataEndRow">data end row</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/dataStartRow" title="https://purl.openfaster.org/sso/dataStartRow">data start row</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/headerMatches" title="https://purl.openfaster.org/sso/headerMatches">header matches</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/literalValue" title="https://purl.openfaster.org/sso/literalValue">literal value</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/formula" title="https://purl.openfaster.org/sso/formula">raw formula</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/rowIndex" title="https://purl.openfaster.org/sso/rowIndex">row index</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/sheetName" title="https://purl.openfaster.org/sso/sheetName">sheet name</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/sheetPosition" title="https://purl.openfaster.org/sso/sheetPosition">sheet position</a></li>
+ </ul>
+ <div class="entity" id="https://purl.openfaster.org/sso/columnIndex">
+  <h3>column index<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/columnIndex</p>
+  <div class="comment">
+   <span class="markdown">1-based column position, matching Excel's own convention. Used on both Cell (its actual position) and DataColumn (a positional layout's fixed target column).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/dataEndRow">
+  <h3>data end row<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/dataEndRow</p>
+  <div class="comment">
+   <span class="markdown">Optional. Absent means read until the first empty cell in the column.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/dataStartRow">
+  <h3>data start row<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/dataStartRow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/headerMatches">
+  <h3>header matches<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/headerMatches</p>
+  <div class="comment">
+   <span class="markdown">Header text to search for, used instead of a fixed sso:columnIndex when the target file's layout isn't controlled by us -- position can't be assumed, so the column is located by its header text at ingestion time instead.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/DataColumn" title="https://purl.openfaster.org/sso/DataColumn">Data Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/literalValue">
+  <h3>literal value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/literalValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/formula">
+  <h3>raw formula<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/formula</p>
+  <div class="comment">
+   <span class="markdown">Raw formula text. Only meaningful when sso:valueType is sso:formulaValue.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/rowIndex">
+  <h3>row index<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/rowIndex</p>
+  <div class="comment">
+   <span class="markdown">1-based row position, matching Excel's own convention.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Cell" title="https://purl.openfaster.org/sso/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/sheetName">
+  <h3>sheet name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/sheetName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Sheet" title="https://purl.openfaster.org/sso/Sheet">Sheet</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/sheetPosition">
+  <h3>sheet position<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/sheetPosition</p>
+  <div class="comment">
+   <span class="markdown">1-based tab order within the Workbook. Explicit, like xsdo:particlePosition, for the same reason: RDF has no native ordering primitive worth trusting.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/sso/Sheet" title="https://purl.openfaster.org/sso/Sheet">Sheet</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#https://purl.openfaster.org/sso/booleanValue" title="https://purl.openfaster.org/sso/booleanValue">boolean</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/dateValue" title="https://purl.openfaster.org/sso/dateValue">date</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/emptyValue" title="https://purl.openfaster.org/sso/emptyValue">empty</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/formulaValue" title="https://purl.openfaster.org/sso/formulaValue">formula</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/numberValue" title="https://purl.openfaster.org/sso/numberValue">number</a></li>
+  <li><a href="#https://purl.openfaster.org/sso/stringValue" title="https://purl.openfaster.org/sso/stringValue">string</a></li>
+ </ul>
+ <div class="entity" id="https://purl.openfaster.org/sso/booleanValue">
+  <h3>boolean<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/booleanValue</p>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/dateValue">
+  <h3>date<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/dateValue</p>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/emptyValue">
+  <h3>empty<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/emptyValue</p>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/formulaValue">
+  <h3>formula<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/formulaValue</p>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/numberValue">
+  <h3>number<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/numberValue</p>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/sso/stringValue">
+  <h3>string<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/sso/stringValue</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
