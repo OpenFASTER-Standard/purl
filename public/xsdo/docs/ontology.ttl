@@ -73,6 +73,13 @@
                                                    rdfs:label "has attribute use"@en .
 
 
+###  https://purl.openfaster.org/xsdo/hasEnumerationValue
+<https://purl.openfaster.org/xsdo/hasEnumerationValue> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://purl.openfaster.org/xsdo/SimpleTypeDefinition> ;
+                                                       rdfs:range <https://purl.openfaster.org/xsdo/EnumerationValue> ;
+                                                       rdfs:label "has enumeration value"@en .
+
+
 ###  https://purl.openfaster.org/xsdo/hasParticle
 <https://purl.openfaster.org/xsdo/hasParticle> rdf:type owl:ObjectProperty ;
                                                rdfs:domain <https://purl.openfaster.org/xsdo/ModelGroup> ;
@@ -144,6 +151,14 @@
                                                   rdfs:domain <https://purl.openfaster.org/xsdo/SimpleTypeDefinition> ;
                                                   rdfs:range xsd:nonNegativeInteger ;
                                                   rdfs:label "fraction digits"@en .
+
+
+###  https://purl.openfaster.org/xsdo/literalValue
+<https://purl.openfaster.org/xsdo/literalValue> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://purl.openfaster.org/xsdo/EnumerationValue> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "The raw XSD token this EnumerationValue represents, e.g. \"HERR\"."@en ;
+                                                rdfs:label "literal value"@en .
 
 
 ###  https://purl.openfaster.org/xsdo/maxExclusive
@@ -335,6 +350,12 @@
 <https://purl.openfaster.org/xsdo/ElementDeclaration> rdf:type owl:Class ;
                                                       rdfs:comment "An association between an element name and a type definition."@en ;
                                                       rdfs:label "Element Declaration"@en .
+
+
+###  https://purl.openfaster.org/xsdo/EnumerationValue
+<https://purl.openfaster.org/xsdo/EnumerationValue> rdf:type owl:Class ;
+                                                    rdfs:comment "A single permitted value of a SimpleTypeDefinition's xs:enumeration facet, as a first-class node so it can carry its own realizesConcept link and be distinguished from the type's raw xsdo:enumeration string list."@en ;
+                                                    rdfs:label "Enumeration Value"@en .
 
 
 ###  https://purl.openfaster.org/xsdo/IdentityConstraintDefinition

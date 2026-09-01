@@ -129,6 +129,17 @@
     
 
 
+    <!-- https://purl.openfaster.org/xsdo/hasEnumerationValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://purl.openfaster.org/xsdo/hasEnumerationValue">
+        <rdfs:domain rdf:resource="https://purl.openfaster.org/xsdo/SimpleTypeDefinition"/>
+        <rdfs:range rdf:resource="https://purl.openfaster.org/xsdo/EnumerationValue"/>
+        <rdfs:label xml:lang="en">has enumeration value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purl.openfaster.org/xsdo/hasParticle -->
 
 
@@ -246,6 +257,18 @@
         <rdfs:domain rdf:resource="https://purl.openfaster.org/xsdo/SimpleTypeDefinition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <rdfs:label xml:lang="en">fraction digits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.openfaster.org/xsdo/literalValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://purl.openfaster.org/xsdo/literalValue">
+        <rdfs:domain rdf:resource="https://purl.openfaster.org/xsdo/EnumerationValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The raw XSD token this EnumerationValue represents, e.g. &quot;HERR&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">literal value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -555,6 +578,16 @@
     <owl:Class rdf:about="https://purl.openfaster.org/xsdo/ElementDeclaration">
         <rdfs:comment xml:lang="en">An association between an element name and a type definition.</rdfs:comment>
         <rdfs:label xml:lang="en">Element Declaration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.openfaster.org/xsdo/EnumerationValue -->
+
+
+    <owl:Class rdf:about="https://purl.openfaster.org/xsdo/EnumerationValue">
+        <rdfs:comment xml:lang="en">A single permitted value of a SimpleTypeDefinition&apos;s xs:enumeration facet, as a first-class node so it can carry its own realizesConcept link and be distinguished from the type&apos;s raw xsdo:enumeration string list.</rdfs:comment>
+        <rdfs:label xml:lang="en">Enumeration Value</rdfs:label>
     </owl:Class>
     
 

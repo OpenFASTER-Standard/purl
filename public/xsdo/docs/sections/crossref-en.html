@@ -11,6 +11,7 @@ This section provides details for each class and property defined by XSD Ontolog
   <li><a href="#https://purl.openfaster.org/xsdo/Choice" title="https://purl.openfaster.org/xsdo/Choice">Choice</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/ComplexTypeDefinition" title="https://purl.openfaster.org/xsdo/ComplexTypeDefinition">Complex Type Definition</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/ElementDeclaration" title="https://purl.openfaster.org/xsdo/ElementDeclaration">Element Declaration</a></li>
+  <li><a href="#https://purl.openfaster.org/xsdo/EnumerationValue" title="https://purl.openfaster.org/xsdo/EnumerationValue">Enumeration Value</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/IdentityConstraintDefinition" title="https://purl.openfaster.org/xsdo/IdentityConstraintDefinition">Identity-constraint Definition</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/Key" title="https://purl.openfaster.org/xsdo/Key">Key</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/KeyRef" title="https://purl.openfaster.org/xsdo/KeyRef">Key Reference</a></li>
@@ -157,6 +158,27 @@ This section provides details for each class and property defined by XSD Ontolog
    </dt>
    <dd>
     <a href="#https://purl.openfaster.org/xsdo/term" title="https://purl.openfaster.org/xsdo/term">term</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/xsdo/EnumerationValue">
+  <h3>Enumeration Value<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/xsdo/EnumerationValue</p>
+  <div class="comment">
+   <span class="markdown">A single permitted value of a SimpleTypeDefinition's xs:enumeration facet, as a first-class node so it can carry its own realizesConcept link and be distinguished from the type's raw xsdo:enumeration string list.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/xsdo/literalValue" title="https://purl.openfaster.org/xsdo/literalValue">literal value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://purl.openfaster.org/xsdo/hasEnumerationValue" title="https://purl.openfaster.org/xsdo/hasEnumerationValue">has enumeration value</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -319,7 +341,7 @@ This section provides details for each class and property defined by XSD Ontolog
     is in domain of
    </dt>
    <dd>
-    <a href="#https://purl.openfaster.org/xsdo/baseTypeDefinition" title="https://purl.openfaster.org/xsdo/baseTypeDefinition">base type definition</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/xsdo/derivationMethod" title="https://purl.openfaster.org/xsdo/derivationMethod">derivation method</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/xsdo/enumeration" title="https://purl.openfaster.org/xsdo/enumeration">enumeration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/fractionDigits" title="https://purl.openfaster.org/xsdo/fractionDigits">fraction digits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/maxExclusive" title="https://purl.openfaster.org/xsdo/maxExclusive">max exclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/maxInclusive" title="https://purl.openfaster.org/xsdo/maxInclusive">max inclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/maxLength" title="https://purl.openfaster.org/xsdo/maxLength">max length</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/minExclusive" title="https://purl.openfaster.org/xsdo/minExclusive">min exclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/minInclusive" title="https://purl.openfaster.org/xsdo/minInclusive">min inclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/minLength" title="https://purl.openfaster.org/xsdo/minLength">min length</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/pattern" title="https://purl.openfaster.org/xsdo/pattern">pattern</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/totalDigits" title="https://purl.openfaster.org/xsdo/totalDigits">total digits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/whiteSpace" title="https://purl.openfaster.org/xsdo/whiteSpace">white space</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://purl.openfaster.org/xsdo/baseTypeDefinition" title="https://purl.openfaster.org/xsdo/baseTypeDefinition">base type definition</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/xsdo/derivationMethod" title="https://purl.openfaster.org/xsdo/derivationMethod">derivation method</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/xsdo/enumeration" title="https://purl.openfaster.org/xsdo/enumeration">enumeration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/fractionDigits" title="https://purl.openfaster.org/xsdo/fractionDigits">fraction digits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/hasEnumerationValue" title="https://purl.openfaster.org/xsdo/hasEnumerationValue">has enumeration value</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://purl.openfaster.org/xsdo/maxExclusive" title="https://purl.openfaster.org/xsdo/maxExclusive">max exclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/maxInclusive" title="https://purl.openfaster.org/xsdo/maxInclusive">max inclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/maxLength" title="https://purl.openfaster.org/xsdo/maxLength">max length</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/minExclusive" title="https://purl.openfaster.org/xsdo/minExclusive">min exclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/minInclusive" title="https://purl.openfaster.org/xsdo/minInclusive">min inclusive</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/minLength" title="https://purl.openfaster.org/xsdo/minLength">min length</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/pattern" title="https://purl.openfaster.org/xsdo/pattern">pattern</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/totalDigits" title="https://purl.openfaster.org/xsdo/totalDigits">total digits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://purl.openfaster.org/xsdo/whiteSpace" title="https://purl.openfaster.org/xsdo/whiteSpace">white space</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -380,6 +402,7 @@ This section provides details for each class and property defined by XSD Ontolog
   <li><a href="#https://purl.openfaster.org/xsdo/contentModel" title="https://purl.openfaster.org/xsdo/contentModel">content model</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/derivationMethod" title="https://purl.openfaster.org/xsdo/derivationMethod">derivation method</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/hasAttributeUse" title="https://purl.openfaster.org/xsdo/hasAttributeUse">has attribute use</a></li>
+  <li><a href="#https://purl.openfaster.org/xsdo/hasEnumerationValue" title="https://purl.openfaster.org/xsdo/hasEnumerationValue">has enumeration value</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/hasParticle" title="https://purl.openfaster.org/xsdo/hasParticle">has particle</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/refer" title="https://purl.openfaster.org/xsdo/refer">refer</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/term" title="https://purl.openfaster.org/xsdo/term">term</a></li>
@@ -476,6 +499,26 @@ This section provides details for each class and property defined by XSD Ontolog
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://purl.openfaster.org/xsdo/hasEnumerationValue">
+  <h3>has enumeration value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/xsdo/hasEnumerationValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/xsdo/SimpleTypeDefinition" title="https://purl.openfaster.org/xsdo/SimpleTypeDefinition">Simple Type Definition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/xsdo/EnumerationValue" title="https://purl.openfaster.org/xsdo/EnumerationValue">Enumeration Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://purl.openfaster.org/xsdo/hasParticle">
   <h3>has particle<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://purl.openfaster.org/xsdo/hasParticle</p>
@@ -565,6 +608,7 @@ This section provides details for each class and property defined by XSD Ontolog
   <li><a href="#https://purl.openfaster.org/xsdo/enumeration" title="https://purl.openfaster.org/xsdo/enumeration">enumeration</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/field" title="https://purl.openfaster.org/xsdo/field">field</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/fractionDigits" title="https://purl.openfaster.org/xsdo/fractionDigits">fraction digits</a></li>
+  <li><a href="#https://purl.openfaster.org/xsdo/literalValue" title="https://purl.openfaster.org/xsdo/literalValue">literal value</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/maxExclusive" title="https://purl.openfaster.org/xsdo/maxExclusive">max exclusive</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/maxInclusive" title="https://purl.openfaster.org/xsdo/maxInclusive">max inclusive</a></li>
   <li><a href="#https://purl.openfaster.org/xsdo/maxLength" title="https://purl.openfaster.org/xsdo/maxLength">max length</a></li>
@@ -646,6 +690,29 @@ This section provides details for each class and property defined by XSD Ontolog
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non Negative Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://purl.openfaster.org/xsdo/literalValue">
+  <h3>literal value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://purl.openfaster.org/xsdo/literalValue</p>
+  <div class="comment">
+   <span class="markdown">The raw XSD token this EnumerationValue represents, e.g. "HERR".</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://purl.openfaster.org/xsdo/EnumerationValue" title="https://purl.openfaster.org/xsdo/EnumerationValue">Enumeration Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>

@@ -74,6 +74,12 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://purl.openfaster.org/xsdo/hasAttributeUse> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.openfaster.org/xsdo/AttributeUse> .
 <https://purl.openfaster.org/xsdo/hasAttributeUse> <http://www.w3.org/2000/01/rdf-schema#label> "has attribute use"@en .
 # 
+# https://purl.openfaster.org/xsdo/hasEnumerationValue
+<https://purl.openfaster.org/xsdo/hasEnumerationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.openfaster.org/xsdo/hasEnumerationValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/xsdo/SimpleTypeDefinition> .
+<https://purl.openfaster.org/xsdo/hasEnumerationValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.openfaster.org/xsdo/EnumerationValue> .
+<https://purl.openfaster.org/xsdo/hasEnumerationValue> <http://www.w3.org/2000/01/rdf-schema#label> "has enumeration value"@en .
+# 
 # https://purl.openfaster.org/xsdo/hasParticle
 <https://purl.openfaster.org/xsdo/hasParticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://purl.openfaster.org/xsdo/hasParticle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/xsdo/ModelGroup> .
@@ -162,6 +168,13 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.openfaster.org/xsdo/fractionDigits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/xsdo/SimpleTypeDefinition> .
 <https://purl.openfaster.org/xsdo/fractionDigits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://purl.openfaster.org/xsdo/fractionDigits> <http://www.w3.org/2000/01/rdf-schema#label> "fraction digits"@en .
+# 
+# https://purl.openfaster.org/xsdo/literalValue
+<https://purl.openfaster.org/xsdo/literalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.openfaster.org/xsdo/literalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.openfaster.org/xsdo/EnumerationValue> .
+<https://purl.openfaster.org/xsdo/literalValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.openfaster.org/xsdo/literalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The raw XSD token this EnumerationValue represents, e.g. \"HERR\"."@en .
+<https://purl.openfaster.org/xsdo/literalValue> <http://www.w3.org/2000/01/rdf-schema#label> "literal value"@en .
 # 
 # https://purl.openfaster.org/xsdo/maxExclusive
 <https://purl.openfaster.org/xsdo/maxExclusive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -340,6 +353,11 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://purl.openfaster.org/xsdo/ElementDeclaration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://purl.openfaster.org/xsdo/ElementDeclaration> <http://www.w3.org/2000/01/rdf-schema#comment> "An association between an element name and a type definition."@en .
 <https://purl.openfaster.org/xsdo/ElementDeclaration> <http://www.w3.org/2000/01/rdf-schema#label> "Element Declaration"@en .
+# 
+# https://purl.openfaster.org/xsdo/EnumerationValue
+<https://purl.openfaster.org/xsdo/EnumerationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.openfaster.org/xsdo/EnumerationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A single permitted value of a SimpleTypeDefinition's xs:enumeration facet, as a first-class node so it can carry its own realizesConcept link and be distinguished from the type's raw xsdo:enumeration string list."@en .
+<https://purl.openfaster.org/xsdo/EnumerationValue> <http://www.w3.org/2000/01/rdf-schema#label> "Enumeration Value"@en .
 # 
 # https://purl.openfaster.org/xsdo/IdentityConstraintDefinition
 <https://purl.openfaster.org/xsdo/IdentityConstraintDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

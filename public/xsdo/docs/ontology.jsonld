@@ -184,6 +184,17 @@
     "@value" : "Element Declaration"
   } ]
 }, {
+  "@id" : "https://purl.openfaster.org/xsdo/EnumerationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A single permitted value of a SimpleTypeDefinition's xs:enumeration facet, as a first-class node so it can carry its own realizesConcept link and be distinguished from the type's raw xsdo:enumeration string list."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Enumeration Value"
+  } ]
+}, {
   "@id" : "https://purl.openfaster.org/xsdo/IdentityConstraintDefinition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -443,6 +454,19 @@
     "@id" : "https://purl.openfaster.org/xsdo/AttributeUse"
   } ]
 }, {
+  "@id" : "https://purl.openfaster.org/xsdo/hasEnumerationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.openfaster.org/xsdo/SimpleTypeDefinition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has enumeration value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.openfaster.org/xsdo/EnumerationValue"
+  } ]
+}, {
   "@id" : "https://purl.openfaster.org/xsdo/hasParticle",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -461,6 +485,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "list"
+  } ]
+}, {
+  "@id" : "https://purl.openfaster.org/xsdo/literalValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The raw XSD token this EnumerationValue represents, e.g. \"HERR\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://purl.openfaster.org/xsdo/EnumerationValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "literal value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://purl.openfaster.org/xsdo/maxExclusive",

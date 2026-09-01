@@ -17,7 +17,7 @@
     },
     {
       "source": "/xsdo/xsd-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/xsd-ontology/v0.1.0/xsd-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/xsd-ontology/v0.2.0/xsd-ontology.owl",
       "permanent": false
     },
     {
