@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/io/institutional-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/institutional-ontology/v0.3.0/institutional-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/institutional-ontology/v0.4.0/institutional-ontology.owl",
       "permanent": false
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "source": "/realizations/kafe.ttl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/realizations/v0.2.0/modules/kafe.ttl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/realizations/v0.3.0/modules/kafe.ttl",
       "permanent": false
     },
     {
