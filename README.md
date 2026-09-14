@@ -3,14 +3,15 @@
 PURL (Persistent URL) redirect service for [OpenFASTER](https://openfaster.org)'s
 ontologies and vocabularies — the identifier namespace stays stable even when
 the underlying files/hosting move. Same idea as `purl.obolibrary.org`, adapted
-for static/serverless hosting (Vercel) instead of Apache — see the design
-notes in [`institutional-ontology`](https://github.com/OpenFASTER-Standard/institutional-ontology)'s
-own README/commit history for the research this is grounded in.
+for static/serverless hosting (Vercel) instead of Apache — see
+[`ontologies`](https://github.com/OpenFASTER-Standard/ontologies)'s own
+README/commit history for the research this is grounded in.
 
 One dedicated service for the whole org, not one per project — real OBO
 Foundry practice is a single central PURL system serving every OBO ontology,
-not one per ontology; this repo follows that, not
-`institutional-ontology`'s own.
+not one per ontology; this repo follows that, not the old standalone
+`institutional-ontology` repo's own (since consolidated into
+[`ontologies`](https://github.com/OpenFASTER-Standard/ontologies)).
 
 Not registered with [w3id.org](https://w3id.org) (the community-run
 alternative) — deliberate, not yet pursued.
@@ -19,18 +20,22 @@ alternative) — deliberate, not yet pursued.
 
 `vercel.json`'s `redirects` array is the whole system — no build step, no
 compiler, no YAML-to-config translation layer (OBO needs that because they
-have hundreds of namespaces; we have one, so it would be premature machinery
-— revisit if/when a second namespace shows up).
+have hundreds of namespaces; we have 7, so it's still premature machinery —
+revisit if the namespace count grows enough that hand-editing the rules
+array becomes unwieldy).
 
 - **Whole-file redirects** point at a **version-pinned**
   `raw.githubusercontent.com` URL for a tagged release — never `main`, so the
   identifier's target never silently changes underneath anyone. Bump the tag
   in `vercel.json` when a new release ships.
-- **Term redirects** (`/io/IO_:id`) point at the term's anchor on the
+- **Term redirects** (e.g. `/io/IO_:id`) point at the term's anchor on
   self-hosted [WIDOCO](https://github.com/dgarijo/Widoco)-generated docs
-  under `public/io/docs/` — WIDOCO's anchor IDs are the term's full IRI, so
-  the destination fragment is just the requested URL itself
-  (`/io/docs/#https://purl.openfaster.org/io/IO_0000001`).
+  under `public/<namespace>/docs/` — WIDOCO's anchor IDs are the term's full
+  IRI, so the destination fragment is just the requested URL itself
+  (`/io/docs/#https://purl.openfaster.org/io/IO_0000001`). Not currently
+  instantiated for any namespace — none of the 7 has real curated content
+  yet, so there's nothing for WIDOCO to document; add the rule (and the
+  `docs/` tree) once a namespace actually has terms worth documenting.
 - **Bare namespace** (`/io`) redirects to the ontology's own GitHub repo.
 
 ## Adding a new ontology/namespace
@@ -45,7 +50,8 @@ have hundreds of namespaces; we have one, so it would be premature machinery
 
 ## Regenerating the docs for `institutional-ontology`
 
-From that repo, after `scripts/build.sh`:
+From the `ontologies` repo, after
+`ontologies/scripts/build-module.sh institutional institutional institutional-ontology`:
 
 ```
 java -jar widoco.jar -ontFile institutional-ontology.owl \

@@ -6,11 +6,6 @@
       "permanent": false
     },
     {
-      "source": "/io/IO_:id",
-      "destination": "/io/docs/#https://purl.openfaster.org/io/IO_:id",
-      "permanent": false
-    },
-    {
       "source": "/io",
       "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/institutional",
       "permanent": false
@@ -21,33 +16,13 @@
       "permanent": false
     },
     {
-      "source": "/xsdo/:id",
-      "destination": "/xsdo/docs/#https://purl.openfaster.org/xsdo/:id",
-      "permanent": false
-    },
-    {
       "source": "/xsdo",
       "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/xsd",
       "permanent": false
     },
     {
-      "source": "/realizations/kafe.ttl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/realizations/v0.3.0/modules/kafe.ttl",
-      "permanent": false
-    },
-    {
-      "source": "/realizations",
-      "destination": "https://github.com/OpenFASTER-Standard/realizations",
-      "permanent": false
-    },
-    {
       "source": "/sso/spreadsheet-ontology.owl",
       "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/spreadsheet%2Fv0.1.0/spreadsheet/spreadsheet-ontology.owl",
-      "permanent": false
-    },
-    {
-      "source": "/sso/:id",
-      "destination": "/sso/docs/#https://purl.openfaster.org/sso/:id",
       "permanent": false
     },
     {
@@ -58,11 +33,6 @@
     {
       "source": "/xmlo/xml-ontology.owl",
       "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/xml%2Fv0.1.0/xml/xml-ontology.owl",
-      "permanent": false
-    },
-    {
-      "source": "/xmlo/:id",
-      "destination": "/xmlo/docs/#https://purl.openfaster.org/xmlo/:id",
       "permanent": false
     },
     {
