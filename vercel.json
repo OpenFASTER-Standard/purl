@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/io/institutional-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/institutional-ontology/v0.4.0/institutional-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/institutional%2Fv0.1.0/institutional/institutional-ontology.owl",
       "permanent": false
     },
     {
@@ -12,12 +12,12 @@
     },
     {
       "source": "/io",
-      "destination": "https://github.com/OpenFASTER-Standard/institutional-ontology",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/institutional",
       "permanent": false
     },
     {
       "source": "/xsdo/xsd-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/xsd-ontology/v0.2.0/xsd-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/xsd%2Fv0.1.0/xsd/xsd-ontology.owl",
       "permanent": false
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "source": "/xsdo",
-      "destination": "https://github.com/OpenFASTER-Standard/xsd-ontology",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/xsd",
       "permanent": false
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "source": "/sso/spreadsheet-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/spreadsheet-ontology/v0.1.0/spreadsheet-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/spreadsheet%2Fv0.1.0/spreadsheet/spreadsheet-ontology.owl",
       "permanent": false
     },
     {
@@ -52,12 +52,12 @@
     },
     {
       "source": "/sso",
-      "destination": "https://github.com/OpenFASTER-Standard/spreadsheet-ontology",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/spreadsheet",
       "permanent": false
     },
     {
       "source": "/xmlo/xml-ontology.owl",
-      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/xml-ontology/v0.1.0/xml-ontology.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/xml%2Fv0.1.0/xml/xml-ontology.owl",
       "permanent": false
     },
     {
@@ -67,7 +67,37 @@
     },
     {
       "source": "/xmlo",
-      "destination": "https://github.com/OpenFASTER-Standard/xml-ontology",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/xml",
+      "permanent": false
+    },
+    {
+      "source": "/mvo/mikadiv-vib-concepts.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/mikadiv-vib%2Fv0.1.0/mikadiv-vib/concepts/mikadiv-vib-concepts.owl",
+      "permanent": false
+    },
+    {
+      "source": "/mvo",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/mikadiv-vib",
+      "permanent": false
+    },
+    {
+      "source": "/mfo/mikadiv-fm-concepts.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/mikadiv-fm%2Fv0.1.0/mikadiv-fm/concepts/mikadiv-fm-concepts.owl",
+      "permanent": false
+    },
+    {
+      "source": "/mfo",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/mikadiv-fm",
+      "permanent": false
+    },
+    {
+      "source": "/kfo/kafe-concepts.owl",
+      "destination": "https://raw.githubusercontent.com/OpenFASTER-Standard/ontologies/kafe%2Fv0.1.0/kafe/concepts/kafe-concepts.owl",
+      "permanent": false
+    },
+    {
+      "source": "/kfo",
+      "destination": "https://github.com/OpenFASTER-Standard/ontologies/tree/main/kafe",
       "permanent": false
     }
   ]
